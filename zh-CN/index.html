@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Piston 探秘</title>
+	</head>
+	<script>
+		function jump(myurl) {
+			bookframe.src=myurl+".html";
+		}
+		function myreset() {
+			var mytable = document.getElementById("tb");
+			mytable.setAttribute("height", document.documentElement.clientHeight * 0.8);
+			var mybook = document.getElementById("bookframe");
+			mybook.setAttribute("height", document.documentElement.clientHeight * 0.8);
+		}
+	</script>
+	<body onresize="myreset()">
+		<table id ="tb" style="width:100%">
+			<tr style="vertical-align:top">
+				<td style="width:120px;text-align:center">
+					目录<br/>
+					<button onclick="jump('welcome')" style="width:120px">欢迎</button><br/>
+					<button onclick="jump('license')" style="width:120px">许可协议</button><br/>
+					<button onclick="jump('aat')" style="width:120px">本书著译者</button><br/>
+					<button onclick="jump('introduction')" style="width:120px">绪论</button>
+				</td>
+				<td>
+					<iframe  id="bookframe" src="welcome.html"  frameborder="0" style="width:100%">
+						如果您不升级您的浏览器，您可能无法浏览此部分内容
+					</iframe>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"  style="text-align:center">
+					<hr/>
+					本书的其他译本<br/>
+					<a href="/index.html">English</a>
+				</td>
+			</tr>
+		</table>
+	</body>
+	<script>
+		var mytable = document.getElementById("tb");
+		mytable.setAttribute("height", document.documentElement.clientHeight * 0.8);
+		var mybook = document.getElementById("bookframe");
+		mybook.setAttribute("height", document.documentElement.clientHeight * 0.8);
+	</script>
+</html>

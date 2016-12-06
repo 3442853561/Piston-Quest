@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Piston Quest</title>
+	</head>
+	<script>
+		function jump(myurl) {
+			bookframe.src=myurl+".html";
+		}
+		function myreset() {
+			var mytable = document.getElementById("tb");
+			mytable.setAttribute("height", document.documentElement.clientHeight * 0.8);
+			var mybook = document.getElementById("bookframe");
+			mybook.setAttribute("height", document.documentElement.clientHeight * 0.8);
+		}
+	</script>
+	<body onresize="myreset()">
+		<table id ="tb" style="width:100%">
+			<tr style="vertical-align:top">
+				<td style="width:120px;text-align:center">
+					Contents<br/>
+					<button onclick="jump('welcome')" style="width:120px">Welcome</button><br/>
+					<button onclick="jump('license')" style="width:120px">License</button><br/>
+					<button onclick="jump('aat')" style="width:120px">Writing Team</button><br/>
+					<button onclick="jump('introduction')" style="width:120px">Introduction</button><br/>
+				</td>
+				<td>
+					<iframe  id="bookframe" src="welcome.html"  frameborder="0" style="width:100%">
+						This old browser is unsupported and will most likely display funky things.
+					</iframe>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"  style="text-align:center">
+					<hr/>
+					The book in other languages<br/>
+					<a href="/zh-CN/index.html">简体中文</a>
+				</td>
+			</tr>
+		</table>
+	</body>
+	<script>
+		var mytable = document.getElementById("tb");
+		mytable.setAttribute("height", document.documentElement.clientHeight * 0.8);
+		var mybook = document.getElementById("bookframe");
+		mybook.setAttribute("height", document.documentElement.clientHeight * 0.8);
+	</script>
+</html>
